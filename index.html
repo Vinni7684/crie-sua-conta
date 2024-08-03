@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receba aqui:</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #ff4b4b, #ff0000);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .login-container {
+            background: #ffffff;
+            padding: 20px 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 350px;
+            width: 100%;
+            margin: 20px;
+        }
+        .login-container img {
+            max-width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .login-container h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333333;
+            font-size: 1.2em;
+        }
+        .login-container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #333333;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .login-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 0.9em;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+            transition: border 0.3s ease;
+        }
+        .login-container input[type="text"]::placeholder {
+            color: #999999;
+        }
+        .login-container input[type="text"]:focus {
+            border-color: #ff4b4b;
+            outline: none;
+        }
+        .login-container .login-button {
+            background: linear-gradient(to right, #ffc107, #ffeb3b);
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .login-container .login-button:hover {
+            background: linear-gradient(to right, #ffb300, #ffd700);
+            box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 5px;
+            accent-color: red;
+        }
+        .checkbox-container label {
+            color: #333333;
+            font-size: 0.8em;
+            margin-left: 1px;
+            margin-top: 5px;
+        }
+        .footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 20px;
+            margin-top: auto;
+            text-align: center;
+            width: 100%;
+        }
+        .footer .footer-section {
+            display: inline-block;
+            width: 32%;
+            vertical-align: top;
+            text-align: center;
+        }
+        .footer .footer-section a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer .footer-section img {
+            max-width: 60px;
+            height: auto;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                justify-content: center;
+                align-items: center;
+            }
+            .login-container {
+                max-width: 90%;
+                padding: 10px;
+                box-shadow: 0 40px 60px rgba(0, 0, 0, 0.15);
+            }
+            .login-container img {
+                max-width: 100px;
+            }
+            .login-container h2 {
+                font-size: 1.2em;
+            }
+            .login-container label {
+                font-size: 0.8em;
+            }
+            .login-container input[type="text"] {
+                padding: 10px;
+                font-size: 0.9em;
+                width: 90%;
+            }
+            .login-container .login-button {
+                padding: 10px;
+                font-size: 0.9em;
+                width: 80%;
+            }
+            .footer {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        function showPaymentContainer() {
+            var name = document.getElementById("nome").value;
+            var instagram = document.getElementById("instagram").value;
+            var checkbox = document.getElementById("perfil-publico");
+            if (!checkbox.checked) {
+                alert("Você precisa confirmar que seu perfil está público.");
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <img src="https://cdn-meloja.nyc3.cdn.digitaloceanspaces.com/stores/uploads/2326794/9_20240101_201459_0008.png" alt="Logo">
+            <h2>Receba aqui:</h2>
+            
+            <form action="https://api.sheetmonkey.io/form/sLyHAMLrQXe39CfYSz66QG" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="seu primeiro nome" required>
+                <label for="instagram">Link do seu perfil:</label>
+                <input type="text" id="instagram" name="instagram" placeholder="Lembre-se de estar público" required>
+                <span class="link" onclick="alert('Informe o link do seu perfil do Instagram. Certifique-se de que está no formato correto, incluindo http:// ou https://. Exemplo: https://www.instagram.com/seuperfil')"></span>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="perfil-publico" required>
+                    <label for="perfil-publico">Meu perfil está público</label>
+                </div>
+                <input type="submit" value="RECEBER" class="login-button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
